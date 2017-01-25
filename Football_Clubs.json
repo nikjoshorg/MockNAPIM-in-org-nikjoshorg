@@ -1,0 +1,52 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "3.2.1",
+    "title": "Football_Clubs",
+    "x-lastModified": "Jan 19, 2017 22:55PM PST",
+    "description": "Information for football_clubs"
+  },
+  "paths": {
+    "/{name}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/GiveNewSchemaNameHere"
+            },
+            "examples": {
+              "application/json": {
+                "Football Club is": "Chelsea"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "GiveNewSchemaNameHere": {
+      "type": "object",
+      "properties": {
+        "Football Club is": {
+          "type": "string",
+          "default": "Chelsea"
+        }
+      }
+    }
+  }
+}
